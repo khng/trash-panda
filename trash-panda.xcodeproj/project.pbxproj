@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		AEBA9E851EC353D40036E9A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA9E841EC353D40036E9A8 /* AppDelegate.swift */; };
-		AEBA9E871EC353D40036E9A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA9E861EC353D40036E9A8 /* ViewController.swift */; };
 		AEBA9E8A1EC353D40036E9A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBA9E881EC353D40036E9A8 /* Main.storyboard */; };
 		AEBA9E8C1EC353D40036E9A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEBA9E8B1EC353D40036E9A8 /* Assets.xcassets */; };
 		AEBA9E8F1EC353D40036E9A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBA9E8D1EC353D40036E9A8 /* LaunchScreen.storyboard */; };
 		AEBA9E9A1EC353D40036E9A8 /* trash_pandaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA9E991EC353D40036E9A8 /* trash_pandaTests.swift */; };
+		AEBA9EA71EC361B40036E9A8 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA9EA61EC361B40036E9A8 /* AddTaskViewController.swift */; };
+		AEBA9EA91EC363950036E9A8 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA9EA81EC363950036E9A8 /* MainTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,6 @@
 /* Begin PBXFileReference section */
 		AEBA9E811EC353D40036E9A8 /* trash-panda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "trash-panda.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBA9E841EC353D40036E9A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AEBA9E861EC353D40036E9A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AEBA9E891EC353D40036E9A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEBA9E8B1EC353D40036E9A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEBA9E8E1EC353D40036E9A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +36,8 @@
 		AEBA9E951EC353D40036E9A8 /* trash-pandaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "trash-pandaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBA9E991EC353D40036E9A8 /* trash_pandaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trash_pandaTests.swift; sourceTree = "<group>"; };
 		AEBA9E9B1EC353D40036E9A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEBA9EA61EC361B40036E9A8 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		AEBA9EA81EC363950036E9A8 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				AEBA9E841EC353D40036E9A8 /* AppDelegate.swift */,
-				AEBA9E861EC353D40036E9A8 /* ViewController.swift */,
+				AEBA9EA61EC361B40036E9A8 /* AddTaskViewController.swift */,
+				AEBA9EA81EC363950036E9A8 /* MainTableViewController.swift */,
 				AEBA9E881EC353D40036E9A8 /* Main.storyboard */,
 				AEBA9E8B1EC353D40036E9A8 /* Assets.xcassets */,
 				AEBA9E8D1EC353D40036E9A8 /* LaunchScreen.storyboard */,
@@ -198,8 +201,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEBA9E871EC353D40036E9A8 /* ViewController.swift in Sources */,
 				AEBA9E851EC353D40036E9A8 /* AppDelegate.swift in Sources */,
+				AEBA9EA91EC363950036E9A8 /* MainTableViewController.swift in Sources */,
+				AEBA9EA71EC361B40036E9A8 /* AddTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +409,7 @@
 				AEBA9EA01EC353D40036E9A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEBA9EA11EC353D40036E9A8 /* Build configuration list for PBXNativeTarget "trash-pandaTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				AEBA9EA31EC353D40036E9A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
