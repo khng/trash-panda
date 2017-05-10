@@ -8,15 +8,18 @@
 
 import UIKit
 
-class AddTaskViewController: UIViewController {
+class AddTaskViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: Properties
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var taskTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        taskTextField.delegate = self
+        taskTextField.placeholder = "Right here!"
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,7 +27,6 @@ class AddTaskViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -39,6 +41,19 @@ class AddTaskViewController: UIViewController {
         
         // return some data
     }
-    
 
+    // MARK: Text Field Delegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        taskTextField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        taskTextField.placeholder = nil
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        taskTextField.placeholder = "Right here!"
+    }
 }
