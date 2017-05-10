@@ -1,0 +1,6 @@
+framework module Pods_trash_panda {
+  umbrella header "Pods-trash-panda-umbrella.h"
+
+  export *
+  module * { export * }
+}

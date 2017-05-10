@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class MainTableViewController: UITableViewController {
-
+    
+    let trashRef = FIRDatabase.database().reference().child("trash")
+    var trash = [Task]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,8 +22,10 @@ class MainTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        fetchName()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -27,25 +33,28 @@ class MainTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    /*
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
+     */
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return trash.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cellId = "cellId"
+        
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
+        
         // Configure the cell...
+        cell.textLabel?.text = trash[indexPath.row].name
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -93,10 +102,42 @@ class MainTableViewController: UITableViewController {
     */
     
     // MARK: Actions
-
     @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
         if sender.source is AddTaskViewController {
             // populate data
+        }
+    }
+    
+    // MARK: Listener
+    func fetchName() {
+        trashRef.observe(.childAdded, with: { (snapshot) in
+            if let dictionary = snapshot.value as? [String : AnyObject]{
+                
+                print(dictionary)
+                
+                let task = Task()
+                task.name = dictionary["name"] as! String?
+                self.trash.append(task)
+                self.tableView.reloadData()
+            }
+            
+        })
+        
+        trashRef.observe(.childRemoved, with: { (snapshot) in
+            if let dictionary = snapshot.value as? [String : AnyObject]{
+                self.removeElementInTrashMatching((dictionary["name"] as! String?)!)
+                self.tableView.reloadData()
+            }
+            
+        })
+    }
+    
+    func removeElementInTrashMatching(_ name: String) {
+        for index in 0...self.trash.count-1 {
+            if name == self.trash[index].name {
+                trash.remove(at: index)
+                break
+            }
         }
     }
 

@@ -1,0 +1,6 @@
+framework module Pods_trash_pandaTests {
+  umbrella header "Pods-trash-pandaTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

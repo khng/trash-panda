@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50E2AF88EA83C86E8BB12D20 /* Pods_trash_pandaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0C234AEAEC7E0266D16C180 /* Pods_trash_pandaTests.framework */; };
+		92BF262F6DA23A43A45BE242 /* Pods_trash_panda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E92F30F6FEBBF87400CF8B /* Pods_trash_panda.framework */; };
+		AE863A561EC3AE170007111B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE863A551EC3AE170007111B /* Task.swift */; };
 		AEBA9E851EC353D40036E9A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA9E841EC353D40036E9A8 /* AppDelegate.swift */; };
 		AEBA9E8A1EC353D40036E9A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBA9E881EC353D40036E9A8 /* Main.storyboard */; };
 		AEBA9E8C1EC353D40036E9A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEBA9E8B1EC353D40036E9A8 /* Assets.xcassets */; };
@@ -14,6 +17,8 @@
 		AEBA9E9A1EC353D40036E9A8 /* trash_pandaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA9E991EC353D40036E9A8 /* trash_pandaTests.swift */; };
 		AEBA9EA71EC361B40036E9A8 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA9EA61EC361B40036E9A8 /* AddTaskViewController.swift */; };
 		AEBA9EA91EC363950036E9A8 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA9EA81EC363950036E9A8 /* MainTableViewController.swift */; };
+		AED7755B1EC3998B00CD1994 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AED7755A1EC3998B00CD1994 /* GoogleService-Info.plist */; };
+		AED7755C1EC3998B00CD1994 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AED7755A1EC3998B00CD1994 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46E92F30F6FEBBF87400CF8B /* Pods_trash_panda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trash_panda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE863A551EC3AE170007111B /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		AEAF0B799BF9E075577151F3 /* Pods-trash-pandaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trash-pandaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trash-pandaTests/Pods-trash-pandaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AEBA9E811EC353D40036E9A8 /* trash-panda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "trash-panda.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBA9E841EC353D40036E9A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEBA9E891EC353D40036E9A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,6 +46,11 @@
 		AEBA9E9B1EC353D40036E9A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEBA9EA61EC361B40036E9A8 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		AEBA9EA81EC363950036E9A8 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		AED7755A1EC3998B00CD1994 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C375463FECCA6AEF0974CE54 /* Pods-trash-pandaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trash-pandaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-trash-pandaTests/Pods-trash-pandaTests.release.xcconfig"; sourceTree = "<group>"; };
+		E0C234AEAEC7E0266D16C180 /* Pods_trash_pandaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trash_pandaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4412692C09D8893E6D8AE2E /* Pods-trash-panda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trash-panda.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trash-panda/Pods-trash-panda.debug.xcconfig"; sourceTree = "<group>"; };
+		E9C8975A06A1DB8935ADE765 /* Pods-trash-panda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trash-panda.release.xcconfig"; path = "Pods/Target Support Files/Pods-trash-panda/Pods-trash-panda.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92BF262F6DA23A43A45BE242 /* Pods_trash_panda.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +66,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50E2AF88EA83C86E8BB12D20 /* Pods_trash_pandaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DE14D08EC36E9BB05F06E11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46E92F30F6FEBBF87400CF8B /* Pods_trash_panda.framework */,
+				E0C234AEAEC7E0266D16C180 /* Pods_trash_pandaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AEBA9E781EC353D40036E9A8 = {
 			isa = PBXGroup;
 			children = (
 				AEBA9E831EC353D40036E9A8 /* trash-panda */,
 				AEBA9E981EC353D40036E9A8 /* trash-pandaTests */,
 				AEBA9E821EC353D40036E9A8 /* Products */,
+				BE1F8A4395EC030FA1180DFB /* Pods */,
+				2DE14D08EC36E9BB05F06E11 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,10 +108,12 @@
 				AEBA9E841EC353D40036E9A8 /* AppDelegate.swift */,
 				AEBA9EA61EC361B40036E9A8 /* AddTaskViewController.swift */,
 				AEBA9EA81EC363950036E9A8 /* MainTableViewController.swift */,
+				AE863A551EC3AE170007111B /* Task.swift */,
 				AEBA9E881EC353D40036E9A8 /* Main.storyboard */,
 				AEBA9E8B1EC353D40036E9A8 /* Assets.xcassets */,
 				AEBA9E8D1EC353D40036E9A8 /* LaunchScreen.storyboard */,
 				AEBA9E901EC353D40036E9A8 /* Info.plist */,
+				AED7755A1EC3998B00CD1994 /* GoogleService-Info.plist */,
 			);
 			path = "trash-panda";
 			sourceTree = "<group>";
@@ -99,6 +127,17 @@
 			path = "trash-pandaTests";
 			sourceTree = "<group>";
 		};
+		BE1F8A4395EC030FA1180DFB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E4412692C09D8893E6D8AE2E /* Pods-trash-panda.debug.xcconfig */,
+				E9C8975A06A1DB8935ADE765 /* Pods-trash-panda.release.xcconfig */,
+				AEAF0B799BF9E075577151F3 /* Pods-trash-pandaTests.debug.xcconfig */,
+				C375463FECCA6AEF0974CE54 /* Pods-trash-pandaTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +145,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEBA9E9E1EC353D40036E9A8 /* Build configuration list for PBXNativeTarget "trash-panda" */;
 			buildPhases = (
+				CD722C558FE6224055ED1FAA /* [CP] Check Pods Manifest.lock */,
 				AEBA9E7D1EC353D40036E9A8 /* Sources */,
 				AEBA9E7E1EC353D40036E9A8 /* Frameworks */,
 				AEBA9E7F1EC353D40036E9A8 /* Resources */,
+				96B4B99E85F30C65100F9A7F /* [CP] Embed Pods Frameworks */,
+				71686AD994FF100ACF30C95C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEBA9EA11EC353D40036E9A8 /* Build configuration list for PBXNativeTarget "trash-pandaTests" */;
 			buildPhases = (
+				081EE0AFE59DA29B59C31E32 /* [CP] Check Pods Manifest.lock */,
 				AEBA9E911EC353D40036E9A8 /* Sources */,
 				AEBA9E921EC353D40036E9A8 /* Frameworks */,
 				AEBA9E931EC353D40036E9A8 /* Resources */,
+				4089FAA692EDD67D910E3274 /* [CP] Embed Pods Frameworks */,
+				798A3280F7211D9E01892E74 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEBA9E8F1EC353D40036E9A8 /* LaunchScreen.storyboard in Resources */,
+				AED7755B1EC3998B00CD1994 /* GoogleService-Info.plist in Resources */,
 				AEBA9E8C1EC353D40036E9A8 /* Assets.xcassets in Resources */,
 				AEBA9E8A1EC353D40036E9A8 /* Main.storyboard in Resources */,
 			);
@@ -191,16 +237,111 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AED7755C1EC3998B00CD1994 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		081EE0AFE59DA29B59C31E32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4089FAA692EDD67D910E3274 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trash-pandaTests/Pods-trash-pandaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71686AD994FF100ACF30C95C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trash-panda/Pods-trash-panda-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		798A3280F7211D9E01892E74 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trash-pandaTests/Pods-trash-pandaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96B4B99E85F30C65100F9A7F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-trash-panda/Pods-trash-panda-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD722C558FE6224055ED1FAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AEBA9E7D1EC353D40036E9A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE863A561EC3AE170007111B /* Task.swift in Sources */,
 				AEBA9E851EC353D40036E9A8 /* AppDelegate.swift in Sources */,
 				AEBA9EA91EC363950036E9A8 /* MainTableViewController.swift in Sources */,
 				AEBA9EA71EC361B40036E9A8 /* AddTaskViewController.swift in Sources */,
@@ -340,6 +481,7 @@
 		};
 		AEBA9E9F1EC353D40036E9A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4412692C09D8893E6D8AE2E /* Pods-trash-panda.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "trash-panda/Info.plist";
@@ -352,6 +494,7 @@
 		};
 		AEBA9EA01EC353D40036E9A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9C8975A06A1DB8935ADE765 /* Pods-trash-panda.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "trash-panda/Info.plist";
@@ -364,6 +507,7 @@
 		};
 		AEBA9EA21EC353D40036E9A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEAF0B799BF9E075577151F3 /* Pods-trash-pandaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -378,6 +522,7 @@
 		};
 		AEBA9EA31EC353D40036E9A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C375463FECCA6AEF0974CE54 /* Pods-trash-pandaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
