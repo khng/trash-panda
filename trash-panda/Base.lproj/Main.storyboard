@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="332" y="123.68815592203899"/>
         </scene>
-        <!--Trash-->
+        <!--Create Trash-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AddTaskViewController" customModule="trash_panda" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,8 +66,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Trash" id="4vu-lM-XBs">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Kzu-jq-HVo"/>
+                    <navigationItem key="navigationItem" title="Create Trash" id="4vu-lM-XBs">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Kzu-jq-HVo">
+                            <connections>
+                                <action selector="cancelButton:" destination="BYZ-38-t0r" id="bAc-Tu-8jr"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="PRE-r7-Zic">
                             <connections>
                                 <segue destination="bbr-uf-smd" kind="unwind" unwindAction="unwindToMealListWithSender:" id="mce-iS-VXr"/>

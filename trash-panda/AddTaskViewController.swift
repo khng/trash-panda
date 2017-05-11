@@ -34,6 +34,9 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: - Navigation
+    @IBAction func cancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
