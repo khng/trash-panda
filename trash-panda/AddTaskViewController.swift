@@ -45,7 +45,6 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
         super.prepare(for: segue, sender: sender)
         guard let button = sender as? UIBarButtonItem, button === saveButton else {
             fatalError("Save button was not pressed, cancelling")
@@ -56,7 +55,6 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
     }
 
     // MARK: Text Field Delegate
-    // TODO: add tap gesture on view to lose text field focus
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard.
         taskTextField.resignFirstResponder()

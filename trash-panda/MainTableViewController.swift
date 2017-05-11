@@ -16,12 +16,6 @@ class MainTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         fetchName()
     }
@@ -32,13 +26,6 @@ class MainTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
-    /*
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-     */
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -67,13 +54,19 @@ class MainTableViewController: UITableViewController {
             let cell = self.tableView.cellForRow(at: indexPath)
             let value = cell?.textLabel?.text
             
-            tableView.beginUpdates()
-            trash.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            tableView.endUpdates()
-            
             removeEntryFromDatabaseWith(value!)
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .destructive, title: "Feed") { (action, indexPath) in
+        // can change to image -> read here: http://stackoverflow.com/questions/29421894/uitableviewrowaction-image-for-title
+            let cell = self.tableView.cellForRow(at: indexPath)
+            let value = cell?.textLabel?.text
+            
+            self.removeEntryFromDatabaseWith(value!)
+        }
+        return [delete]
     }
     
     // MARK: Actions
@@ -105,7 +98,6 @@ class MainTableViewController: UITableViewController {
     }
     
     // MARK: Helper Methods
-    
     func removeElementInTrashMatching(_ name: String) {
         for index in 0...self.trash.count-1 {
             if name == self.trash[index].name {
@@ -121,10 +113,14 @@ class MainTableViewController: UITableViewController {
         
         queryRef.observeSingleEvent(of: .value, with: { (snapshot) in
             
+            var check: Bool = true
             for snap in snapshot.children {
-                let userSnap = snap as! FIRDataSnapshot
-                let uid = userSnap.key //the uid of query string
-                self.trashRef.child(uid).removeValue()
+                if check {
+                    let userSnap = snap as! FIRDataSnapshot
+                    let uid = userSnap.key
+                    self.trashRef.child(uid).removeValue()
+                    check = false
+                }
             }
         })
     }
