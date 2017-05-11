@@ -20,6 +20,9 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(AddTaskViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
 
         // Do any additional setup after loading the view.
         taskTextField.delegate = self
@@ -75,5 +78,11 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
         // Disable the Save button if the text field is empty.
         let text = taskTextField.text ?? ""
         saveButton.isEnabled = !text.isEmpty
+    }
+    
+    // MARK: Helper Method
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 }
