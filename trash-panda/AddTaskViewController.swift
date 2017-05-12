@@ -50,7 +50,7 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
             fatalError("Save button was not pressed, cancelling")
         }
         let text = taskTextField.text ?? ""
-        self.rootRef.child("trash").childByAutoId().setValue(["name": "\(text)"])
+        self.rootRef.child("trash").childByAutoId().setValue(["name": "\(text)", "timestamp": "\(Date())", "complete": false])
         // return some data
     }
 
@@ -69,6 +69,11 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         updateSaveButtonState()
         taskTextField.placeholder = placeholderText
+    }
+    
+    // MARK: Action
+    @IBAction func textFieldEditingChanged(_ sender: Any) {
+        saveButton.isEnabled = (taskTextField.text?.characters.count)! > 0
     }
     
     // MARK: Private Method

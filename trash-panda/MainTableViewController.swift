@@ -110,18 +110,11 @@ class MainTableViewController: UITableViewController {
     func removeEntryFromDatabaseWith(_ name: String) {
         let queryRef = trashRef.queryOrdered(byChild: "name")
             .queryEqual(toValue: name)
+            .queryLimited(toFirst: 1)
         
         queryRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            
-            var check: Bool = true
-            for snap in snapshot.children {
-                if check {
-                    let userSnap = snap as! FIRDataSnapshot
-                    let uid = userSnap.key
-                    self.trashRef.child(uid).removeValue()
-                    check = false
-                }
-            }
+            let trashElement = snapshot.children.nextObject() as! FIRDataSnapshot
+            self.trashRef.child(trashElement.key).removeValue()
         })
     }
 
