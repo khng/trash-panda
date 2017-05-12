@@ -128,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="-607.20000000000005" y="123.68815592203899"/>
         </scene>
-        <!--View Controller-->
+        <!--Landfill View Controller-->
         <scene sceneID="s0F-EU-auh">
             <objects>
-                <viewController id="PHF-ZO-pxX" sceneMemberID="viewController">
+                <viewController id="PHF-ZO-pxX" customClass="LandfillViewController" customModule="trash_panda" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JKd-9H-Psu"/>
                         <viewControllerLayoutGuide type="bottom" id="aae-qq-SXp"/>
@@ -140,17 +140,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Buffet is empty! 😞" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTR-91-qcw">
-                                <rect key="frame" x="34" y="240" width="306" height="187"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YSq-6z-UZn">
+                                <rect key="frame" x="0.0" y="233" width="375" height="434"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="l1S-zF-Cdx">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l1S-zF-Cdx" id="nGm-Cr-66p">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="INS-Cx-G4X">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="234"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YSq-6z-UZn" firstAttribute="top" secondItem="JKd-9H-Psu" secondAttribute="bottom" constant="213" id="9RI-wa-ZvA"/>
+                            <constraint firstItem="INS-Cx-G4X" firstAttribute="leading" secondItem="YSq-6z-UZn" secondAttribute="leading" id="PQu-ro-rzf"/>
+                            <constraint firstItem="INS-Cx-G4X" firstAttribute="top" secondItem="xu7-5s-nAU" secondAttribute="top" id="bjk-CX-URS"/>
+                            <constraint firstItem="aae-qq-SXp" firstAttribute="top" secondItem="INS-Cx-G4X" secondAttribute="bottom" constant="384" id="e1j-nR-9mw"/>
+                            <constraint firstItem="INS-Cx-G4X" firstAttribute="centerX" secondItem="xu7-5s-nAU" secondAttribute="centerX" id="fsg-a3-scY"/>
+                            <constraint firstItem="YSq-6z-UZn" firstAttribute="centerX" secondItem="xu7-5s-nAU" secondAttribute="centerX" id="oMO-4F-rDP"/>
+                            <constraint firstAttribute="bottom" secondItem="YSq-6z-UZn" secondAttribute="bottom" id="rkl-4R-zhp"/>
+                            <constraint firstItem="INS-Cx-G4X" firstAttribute="leading" secondItem="xu7-5s-nAU" secondAttribute="leading" id="v2V-Xl-abR"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="history" id="Lzw-UJ-lik"/>
+                    <connections>
+                        <outlet property="tableView" destination="YSq-6z-UZn" id="yor-oN-KIm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ttb-KD-Hrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
