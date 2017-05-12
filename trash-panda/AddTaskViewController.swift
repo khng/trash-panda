@@ -50,7 +50,7 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
             fatalError("Save button was not pressed, cancelling")
         }
         let text = taskTextField.text ?? ""
-        self.rootRef.child("trash").childByAutoId().setValue(["name": "\(text)", "timestamp": "\(Date())", "complete": false])
+        self.rootRef.child("trash").childByAutoId().setValue(["name": "\(text)", "timestamp": "\(Date())"])
         // return some data
     }
 

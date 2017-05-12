@@ -11,8 +11,9 @@ import Firebase
 
 class MainTableViewController: UITableViewController {
     
-    let trashRef = FIRDatabase.database().reference().child("trash")
     var trash = [Task]()
+    let trashRef = FIRDatabase.database().reference().child("trash")
+    let landfillRef = FIRDatabase.database().reference().child("landfill")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,16 +47,6 @@ class MainTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
-    }
-    
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == UITableViewCellEditingStyle.delete) {
-            // handle delete (by removing the data from your array and updating the tableview)
-            let cell = self.tableView.cellForRow(at: indexPath)
-            let value = cell?.textLabel?.text
-            
-            removeEntryFromDatabaseWith(value!)
-        }
     }
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
@@ -108,6 +99,8 @@ class MainTableViewController: UITableViewController {
     }
     
     func removeEntryFromDatabaseWith(_ name: String) {
+        self.addEntryToLandfillWith(name: name)
+        
         let queryRef = trashRef.queryOrdered(byChild: "name")
             .queryEqual(toValue: name)
             .queryLimited(toFirst: 1)
@@ -116,6 +109,10 @@ class MainTableViewController: UITableViewController {
             let trashElement = snapshot.children.nextObject() as! FIRDataSnapshot
             self.trashRef.child(trashElement.key).removeValue()
         })
+    }
+    
+    func addEntryToLandfillWith(name text: String) {
+        self.landfillRef.childByAutoId().setValue(["name": "\(text)", "timestamp": "\(Date())"])
     }
 
 }
