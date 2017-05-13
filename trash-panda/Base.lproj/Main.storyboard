@@ -141,7 +141,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YSq-6z-UZn">
-                                <rect key="frame" x="0.0" y="233" width="375" height="434"/>
+                                <rect key="frame" x="0.0" y="233" width="375" height="385"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="l1S-zF-Cdx">
@@ -160,14 +160,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YSq-6z-UZn" firstAttribute="top" secondItem="JKd-9H-Psu" secondAttribute="bottom" constant="213" id="9RI-wa-ZvA"/>
-                            <constraint firstItem="INS-Cx-G4X" firstAttribute="leading" secondItem="YSq-6z-UZn" secondAttribute="leading" id="PQu-ro-rzf"/>
-                            <constraint firstItem="INS-Cx-G4X" firstAttribute="top" secondItem="xu7-5s-nAU" secondAttribute="top" id="bjk-CX-URS"/>
-                            <constraint firstItem="aae-qq-SXp" firstAttribute="top" secondItem="INS-Cx-G4X" secondAttribute="bottom" constant="384" id="e1j-nR-9mw"/>
-                            <constraint firstItem="INS-Cx-G4X" firstAttribute="centerX" secondItem="xu7-5s-nAU" secondAttribute="centerX" id="fsg-a3-scY"/>
-                            <constraint firstItem="YSq-6z-UZn" firstAttribute="centerX" secondItem="xu7-5s-nAU" secondAttribute="centerX" id="oMO-4F-rDP"/>
-                            <constraint firstAttribute="bottom" secondItem="YSq-6z-UZn" secondAttribute="bottom" id="rkl-4R-zhp"/>
-                            <constraint firstItem="INS-Cx-G4X" firstAttribute="leading" secondItem="xu7-5s-nAU" secondAttribute="leading" id="v2V-Xl-abR"/>
+                            <constraint firstItem="YSq-6z-UZn" firstAttribute="leading" secondItem="INS-Cx-G4X" secondAttribute="leading" id="3bd-mC-Dtf"/>
+                            <constraint firstItem="YSq-6z-UZn" firstAttribute="bottom" secondItem="aae-qq-SXp" secondAttribute="top" id="BpT-Xu-Ubv"/>
+                            <constraint firstItem="INS-Cx-G4X" firstAttribute="top" secondItem="xu7-5s-nAU" secondAttribute="top" id="ChC-8J-6LZ"/>
+                            <constraint firstItem="YSq-6z-UZn" firstAttribute="centerX" secondItem="xu7-5s-nAU" secondAttribute="centerX" id="JjO-1c-SMe"/>
+                            <constraint firstItem="YSq-6z-UZn" firstAttribute="top" secondItem="JKd-9H-Psu" secondAttribute="bottom" constant="213" id="MBY-XD-lbU"/>
+                            <constraint firstItem="aae-qq-SXp" firstAttribute="top" secondItem="INS-Cx-G4X" secondAttribute="bottom" constant="384" id="U7j-8i-z5l"/>
+                            <constraint firstItem="INS-Cx-G4X" firstAttribute="centerX" secondItem="xu7-5s-nAU" secondAttribute="centerX" id="mzL-0B-fNx"/>
+                            <constraint firstItem="YSq-6z-UZn" firstAttribute="leading" secondItem="xu7-5s-nAU" secondAttribute="leading" id="sEg-c5-uP7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="history" id="Lzw-UJ-lik"/>

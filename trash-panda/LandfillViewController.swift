@@ -58,6 +58,9 @@ class LandfillViewController: UIViewController, UITableViewDataSource, UITableVi
             if let dictionary = snapshot.value as? [String : AnyObject]{
                 let task = Task()
                 task.name = dictionary["name"] as! String?
+                print(dictionary["timestamp"])
+                
+                //task.timestamp = dictionary["timestamp"]
                 self.trash.append(task)
                 self.tableView.reloadData()
             }
@@ -71,6 +74,10 @@ class LandfillViewController: UIViewController, UITableViewDataSource, UITableVi
             }
             
         })
+        
+        landfillRef.observe(.value, with: { (snapshot) in
+            self.removeElementsGreaterThanOneHourOld()
+        })
     }
     
     // MARK: Helper Methods
@@ -82,4 +89,22 @@ class LandfillViewController: UIViewController, UITableViewDataSource, UITableVi
             }
         }
     }
+    
+    func removeElementsGreaterThanOneHourOld() {
+        var length = self.trash.count
+        var count = 0
+        while(count < length) {
+            let timeInterval = Int(Date().timeIntervalSince(self.trash[count].timestamp!))
+            if Int(timeInterval) > 0 {
+                let temp = trash[length-1]
+                trash[length-1] = trash[count]
+                trash[count] = temp
+                count -= 1
+                length -= 1
+            }
+            count += 1
+        }
+       print(trash.prefix(length))
+    }
+    
 }
