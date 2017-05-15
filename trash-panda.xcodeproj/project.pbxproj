@@ -19,6 +19,7 @@
 		AEBA9EA91EC363950036E9A8 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBA9EA81EC363950036E9A8 /* MainTableViewController.swift */; };
 		AED7755B1EC3998B00CD1994 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AED7755A1EC3998B00CD1994 /* GoogleService-Info.plist */; };
 		AED7755C1EC3998B00CD1994 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AED7755A1EC3998B00CD1994 /* GoogleService-Info.plist */; };
+		AEE3606B1EC601740002192B /* LandfillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE3606A1EC601740002192B /* LandfillViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		AEBA9EA61EC361B40036E9A8 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		AEBA9EA81EC363950036E9A8 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		AED7755A1EC3998B00CD1994 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AEE3606A1EC601740002192B /* LandfillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandfillViewController.swift; sourceTree = "<group>"; };
 		C375463FECCA6AEF0974CE54 /* Pods-trash-pandaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trash-pandaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-trash-pandaTests/Pods-trash-pandaTests.release.xcconfig"; sourceTree = "<group>"; };
 		E0C234AEAEC7E0266D16C180 /* Pods_trash_pandaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trash_pandaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4412692C09D8893E6D8AE2E /* Pods-trash-panda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trash-panda.debug.xcconfig"; path = "Pods/Target Support Files/Pods-trash-panda/Pods-trash-panda.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				AEBA9EA61EC361B40036E9A8 /* AddTaskViewController.swift */,
 				AEBA9EA81EC363950036E9A8 /* MainTableViewController.swift */,
 				AE863A551EC3AE170007111B /* Task.swift */,
+				AEE3606A1EC601740002192B /* LandfillViewController.swift */,
 				AEBA9E881EC353D40036E9A8 /* Main.storyboard */,
 				AEBA9E8B1EC353D40036E9A8 /* Assets.xcassets */,
 				AEBA9E8D1EC353D40036E9A8 /* LaunchScreen.storyboard */,
@@ -345,6 +348,7 @@
 				AEBA9E851EC353D40036E9A8 /* AppDelegate.swift in Sources */,
 				AEBA9EA91EC363950036E9A8 /* MainTableViewController.swift in Sources */,
 				AEBA9EA71EC361B40036E9A8 /* AddTaskViewController.swift in Sources */,
+				AEE3606B1EC601740002192B /* LandfillViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
