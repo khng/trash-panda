@@ -18,14 +18,9 @@ class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchName()
+        fetchTasks()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,11 +63,12 @@ class MainTableViewController: UITableViewController {
     }
     
     // MARK: Listener
-    func fetchName() {
+    func fetchTasks() {
         trashRef.observe(.childAdded, with: { (snapshot) in
-            if let dictionary = snapshot.value as? [String : AnyObject]{
+            if let dictionary = snapshot.value as? [String : AnyObject] {
                 let task = Task()
                 task.name = dictionary["name"] as! String?
+                task.timeStamp = dictionary["timestamp"] as! Int?
                 self.trash.append(task)
                 self.tableView.reloadData()
             }
@@ -80,8 +76,10 @@ class MainTableViewController: UITableViewController {
         })
         
         trashRef.observe(.childRemoved, with: { (snapshot) in
-            if let dictionary = snapshot.value as? [String : AnyObject]{
-                self.removeElementInTrashMatching((dictionary["name"] as! String?)!)
+            if let dictionary = snapshot.value as? [String : AnyObject] {
+                let taskName = dictionary["name"] as? String ?? ""
+                let taskTimestamp = dictionary["timestamp"] as? Int ?? 0
+                self.removeElementInTrashMatching(taskName, taskTimestamp)
                 self.tableView.reloadData()
             }
             
@@ -89,11 +87,11 @@ class MainTableViewController: UITableViewController {
     }
     
     // MARK: Helper Methods
-    func removeElementInTrashMatching(_ name: String) {
+    func removeElementInTrashMatching(_ name: String, _ timestamp: Int) {
         for index in 0...self.trash.count-1 {
-            if name == self.trash[index].name {
+            if name == self.trash[index].name && timestamp == self.trash[index].timeStamp {
                 trash.remove(at: index)
-                break
+                return
             }
         }
     }
@@ -112,7 +110,6 @@ class MainTableViewController: UITableViewController {
     }
     
     func addEntryToLandfillWith(name text: String) {
-        self.landfillRef.childByAutoId().setValue(["name": "\(text)", "timestamp": "\(Date())"])
+        self.landfillRef.childByAutoId().setValue(["name": "\(text)", "timestamp": Int(Date().timeIntervalSince1970)])
     }
-
 }

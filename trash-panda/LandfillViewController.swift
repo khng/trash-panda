@@ -58,6 +58,7 @@ class LandfillViewController: UIViewController, UITableViewDataSource, UITableVi
             if let dictionary = snapshot.value as? [String : AnyObject]{
                 let task = Task()
                 task.name = dictionary["name"] as! String?
+                task.timeStamp = dictionary["timestamp"] as! Int?
                 self.trash.append(task)
                 self.tableView.reloadData()
             }
@@ -71,6 +72,10 @@ class LandfillViewController: UIViewController, UITableViewDataSource, UITableVi
             }
             
         })
+        
+        landfillRef.observe(.value, with: { (snapshot) in
+            self.removeOldElements()
+        })
     }
     
     // MARK: Helper Methods
@@ -81,5 +86,19 @@ class LandfillViewController: UIViewController, UITableViewDataSource, UITableVi
                 break
             }
         }
+    }
+    
+    func removeOldElements() {
+        let childKey = "timestamp" as String
+        let minTimeToKeep = Int(Date().timeIntervalSince1970) - 60 as Int
+        landfillRef
+            .queryOrdered(byChild: childKey)
+            .queryEnding(atValue: minTimeToKeep)
+            .observeSingleEvent(of: .value, with: { (snapshot) in
+                for child in snapshot.children {
+                    let update = [(child as! FIRDataSnapshot).key: nil] as Dictionary<String, Any?>
+                    self.landfillRef.updateChildValues(update)
+                }
+        })
     }
 }

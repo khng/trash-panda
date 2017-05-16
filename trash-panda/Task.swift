@@ -10,5 +10,5 @@ import UIKit
 
 class Task {
     var name: String?
-    
+    var timeStamp: Int?
 }

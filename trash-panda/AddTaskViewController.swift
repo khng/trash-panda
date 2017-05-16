@@ -30,11 +30,6 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
         
         updateSaveButtonState()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     // MARK: - Navigation
     @IBAction func cancelButton(_ sender: Any) {
@@ -50,7 +45,7 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
             fatalError("Save button was not pressed, cancelling")
         }
         let text = taskTextField.text ?? ""
-        self.rootRef.child("trash").childByAutoId().setValue(["name": "\(text)", "timestamp": "\(Date())"])
+        self.rootRef.child("trash").childByAutoId().setValue(["name": "\(text)", "timestamp": Int(Date().timeIntervalSince1970)])
         // return some data
     }
 

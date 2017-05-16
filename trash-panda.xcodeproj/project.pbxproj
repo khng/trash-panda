@@ -109,9 +109,9 @@
 			children = (
 				AEBA9E841EC353D40036E9A8 /* AppDelegate.swift */,
 				AEBA9EA61EC361B40036E9A8 /* AddTaskViewController.swift */,
+				AEE3606A1EC601740002192B /* LandfillViewController.swift */,
 				AEBA9EA81EC363950036E9A8 /* MainTableViewController.swift */,
 				AE863A551EC3AE170007111B /* Task.swift */,
-				AEE3606A1EC601740002192B /* LandfillViewController.swift */,
 				AEBA9E881EC353D40036E9A8 /* Main.storyboard */,
 				AEBA9E8B1EC353D40036E9A8 /* Assets.xcassets */,
 				AEBA9E8D1EC353D40036E9A8 /* LaunchScreen.storyboard */,
